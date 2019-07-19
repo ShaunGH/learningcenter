@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>question</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    </head>
+    <body data-spy="scroll">
+            <%- include('./menu') %>
+        <section>
+            <div class="content">
+                <form class='exam' action="/exam" method="post">
+                    <pre>
+                        <ul>
+                            <li>Title:<p class='exam'><%= question.title %></p></li>
+                            <li>Describe:<p class='exam'><%= question.describe %></p></li>
+                            <li><div id='blackblock'><p id='ranswer'><%= question.ranswer %></p></div></li>
+                        </ul>
+                    </pre>
+                    <div class="submit"><button type="submit">submit</button></div>
+                </form>
+                <p class="alert"><%= alert %></p>
+                <p class="error"><%= error %></p>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>question</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    </head>
+    <body data-spy="scroll">
+            <%- include('./menu') %>
+        <section>
+            <div class="content">
+                <form action="/library/deleteQuestions" method="post">
+                    <pre>
+                        <table class='library'>
+                            <% questions.forEach(function(q){ %>
+                            <tr class="info">
+                                <td class='checkbox'><input type="checkbox" name="qid" value=<%= q.id %> ></td>
+                                <td>Describe:</td>
+                                <td><%= q.describe %></td>
+                            </tr>
+                            <tr class="moreinfo">
+                                <td></td>
+                                <td>More:</td>
+                                <td colspan="2"><p><%= q.moreinfo %></p></td>
+                            </tr>
+                            <% }); %>
+                        </table>
+                    </pre>
+                    <div class="submit"><button type="submit" value="edit" onclick="editQuestion()">Edit</button><button type="submit" value='delete'>Delete</button></div>
+                </form>
+                <p class="alert"><%= alert %></p>
+                <p class="error"><%= error %></p>
+            </div>
+        </section>
+    </body>
+</html>
