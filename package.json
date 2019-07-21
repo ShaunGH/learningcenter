@@ -1,9 +1,12 @@
 {
-  "name": "learncenter",
+  "name": "learningcenter",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "main": "index.js",
+  "repository": "https://ShaunGH@github.com/ShaunGH/learningcenter.git",
+  "author": "ShaunGH <wangxintao1988@live.com>",
+  "license": "MIT",
   "dependencies": {
+    "antd": "^3.20.5",
     "ejs": "^2.6.2",
     "koa": "^2.7.0",
     "koa-body": "^4.1.0",
@@ -12,11 +15,5 @@
     "koa-views": "^6.2.0",
     "mysql2": "^1.6.5",
     "sequelize": "^5.9.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }
